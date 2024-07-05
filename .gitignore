@@ -1,2 +1,26 @@
-node_modules
+# Ignore Mac system files
+.DS_Store
+
+# Ignore node_modules directory (for Node.js projects)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore directories for virtual environments
+venv/
+env/
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore environment variable files
 .env
