@@ -22,7 +22,6 @@ app.use(express.urlencoded({ extended: true }));
 //   throw new Error('Testing Error logger')
 // })
 
-//global error handler
 
 //handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
