@@ -4,7 +4,7 @@ import httpStatus from 'http-status';
 
 import cookieParser from 'cookie-parser';
 
-       const app: Application = express();
+const app: Application = express();
 
 app.use(cors({ origin: 'http://localhost:3030', credentials: true }));
 app.use(cookieParser());
@@ -21,7 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 // app.get('/', async (req: Request, res: Response, next: NextFunction) => {
 //   throw new Error('Testing Error logger')
 // })
-
 
 //handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
