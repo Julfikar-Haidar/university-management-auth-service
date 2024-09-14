@@ -16,6 +16,11 @@
     "prepare": "husky install",
     "eslint:migrate": "npx @eslint/migrate-config .eslintrc.json"
   },
+  "husky": {
+  "hooks": {
+    "pre-commit": "yarn lint-staged"
+  }
+},
   "lint-staged": {
     "src/**/*.{js,ts,json,css,scss,md}": [
       "yarn run lint:staged",
