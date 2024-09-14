@@ -4,34 +4,44 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node-dev src/server.ts",
-    "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-    "lint:fix": "eslint . --fix",
-    "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "prettier:fix": "prettier --write .",
-    "lint-prettier": "yarn lint:check && yarn prettier:check",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint:check": "eslint .eslintignore \"src/**/*.+(js|ts|json)\"",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "lint:staged": "eslint .eslintignore",
+    "prettier:check": "prettier --ignore-path .prettierignore --check \"src/**/*.+(js|ts|json)\"",
+    "prettier:fix": "prettier --ignore-path .prettierignore --write \"**/*.+(js|ts|json)\"",
+    "prettier:staged": "prettier --ignore-path .prettierignore --write",
+    "lint-prettier:check": "npm run lint:check && npm run prettier:check",
+    "lint-prettier:fix": "npm run lint:fix && npm run prettier:fix",
+    "prepare": "husky install",
+    "eslint:migrate": "npx @eslint/migrate-config .eslintrc.json"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,json,css,scss,md}": [
+      "yarn run lint:staged",
+      "yarn run prettier:staged"
+    ]
   },
   "author": "Julfikar",
   "license": "ISC",
-  "lint-staged": {
-    "src/**/*.ts": "yarn lint-prettier"
-  },
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/nodemailer": "^6.4.13",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@eslint/migrate-config": "^1.3.0",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie-parser": "^1.4.3",
     "@types/jsonwebtoken": "^9.0.2",
@@ -41,6 +51,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "http-status": "^1.6.2",
+    "init": "^0.1.2",
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^8.6.0",
