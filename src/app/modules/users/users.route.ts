@@ -6,7 +6,7 @@ const router = express.Router();
 router.post(
   '/create',
 
-  usersController.createUsersdd
+  usersController.createUsers
 );
 
 export default router;

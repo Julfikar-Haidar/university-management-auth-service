@@ -1,6 +1,8 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import prettier from 'eslint-plugin-prettier';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -24,9 +26,18 @@ export default [
       ecmaVersion: 2020,
       sourceType: 'module',
     },
+    plugins: {
+      '@typescript-eslint': typescriptEslintPlugin, // Add the TypeScript ESLint plugin object
+      prettier, // Add the Prettier plugin object
+    },
 
     rules: {
       'prettier/prettier': 'error',
+      //   'no-console': 'error',
+      //   'no-undef': 'error',
+      'no-unused-expressions': 'error',
+      'no-unreachable': 'error',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     },
   },
 ];
