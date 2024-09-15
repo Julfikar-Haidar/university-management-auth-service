@@ -7,7 +7,7 @@
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "lint:check": "eslint .eslintignore \"src/**/*.+(js|ts|json)\"",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
-    "lint:staged": "eslint .eslintignore",
+    "lint:staged": "eslint",
     "prettier:check": "prettier --ignore-path .prettierignore --check \"src/**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --ignore-path .prettierignore --write \"**/*.+(js|ts|json)\"",
     "prettier:staged": "prettier --ignore-path .prettierignore --write",
