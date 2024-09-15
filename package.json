@@ -13,8 +13,12 @@
     "prettier:staged": "prettier --ignore-path .prettierignore --write",
     "lint-prettier:check": "npm run lint:check && npm run prettier:check",
     "lint-prettier:fix": "npm run lint:fix && npm run prettier:fix",
-    "prepare": "husky",
     "eslint:migrate": "npx @eslint/migrate-config .eslintrc.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,ts,json,css,scss,md}": [
