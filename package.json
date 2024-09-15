@@ -17,14 +17,17 @@
     "eslint:migrate": "npx @eslint/migrate-config .eslintrc.json"
   },
   "husky": {
-  "hooks": {
-    "pre-commit": "yarn lint-staged"
-  }
-},
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,ts,json,css,scss,md}": [
       "yarn run lint:staged",
       "yarn run prettier:staged"
+    ],
+    "src/**/*.{json,css,md,mjs}": [
+      "prettier --write"
     ]
   },
   "author": "Julfikar",
@@ -39,7 +42,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "ts-node-dev": "^2.0.0",
