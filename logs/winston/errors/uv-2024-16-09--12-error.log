@@ -1,0 +1,10 @@
+{
+  level: 'error',
+  label: 'error meow!',
+  timestamp: '2024-09-16T06:45:29.789Z'
+}
+Mon Sep 16 2024 12:50:26} [error meow!] error: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Mon Sep 16 2024 12:51:1} [error meow!] error: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Mon Sep 16 2024 12:51:32} [error meow!] error: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Mon Sep 16 2024 12:51:49} [error meow!] error: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Mon Sep 16 2024 12:51:52} [error meow!] error: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.

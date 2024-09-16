@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/julfikar/Documents/university-management-auth/logs/winston/.a6170652e62c905785c87b077cb2a0e56f121ffc-audit.json",
+    "files": [
+        {
+            "date": 1726469129786,
+            "name": "/Users/julfikar/Documents/university-management-auth/logs/winston/uv-2024-16-09-12-success.log",
+            "hash": "bf5d7f99af2f2317e47b8975a0fe900a36a2481654abd37b96af5afb902afccc"
+        }
+    ],
+    "hashType": "sha256"
+}
