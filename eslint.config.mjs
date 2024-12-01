@@ -8,10 +8,11 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Include the recommended configuration
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
 });
 
 export default [
@@ -21,23 +22,26 @@ export default [
     'plugin:prettier/recommended'
   ),
   {
+    files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsParser,
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       sourceType: 'module',
+      globals: {
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+      },
     },
     plugins: {
-      '@typescript-eslint': typescriptEslintPlugin, // Add the TypeScript ESLint plugin object
-      prettier, // Add the Prettier plugin object
+      '@typescript-eslint': typescriptEslintPlugin,
+      prettier,
     },
-
     rules: {
       'prettier/prettier': 'error',
-      //   'no-console': 'error',
-      //   'no-undef': 'error',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       'no-unused-expressions': 'error',
       'no-unreachable': 'error',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     },
   },
 ];

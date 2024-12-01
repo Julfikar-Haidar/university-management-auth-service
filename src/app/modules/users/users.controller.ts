@@ -1,14 +1,14 @@
-import { Request, Response } from 'express';
-import usersService from './users.service';
+import { RequestHandler } from 'express';
+import { UserService } from './users.service';
 
-const createUsers = async (req: Request, res: Response) => {
+const createUsers: RequestHandler = async (req, res, next) => {
   try {
     console.log('Inside createUser controller');
 
     const { user } = req.body;
     console.log('Received user data:', user);
 
-    const result = await usersService.createUser(user);
+    const result = await UserService.createUser(user);
     console.log('Result from service:', result);
 
     res.status(200).json({
@@ -17,14 +17,10 @@ const createUsers = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (error) {
-    console.error('Error in createUser controller:', error);
-    res.status(400).json({
-      success: false,
-      message: 'Failed to create user',
-    });
+    next(error);
   }
 };
 
-export default {
+export const UserController = {
   createUsers,
 };

@@ -11,8 +11,8 @@
     "prettier:check": "prettier --ignore-path .prettierignore --check \"src/**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --ignore-path .prettierignore --write \"**/*.+(js|ts|json)\"",
     "prettier:staged": "prettier --ignore-path .prettierignore --write",
-    "lint-prettier:check": "npm run lint:check && npm run prettier:check",
-    "lint-prettier:fix": "npm run lint:fix && npm run prettier:fix",
+    "lint-prettier:check": "yarn  lint:check && yarn  prettier:check",
+    "lint-prettier:fix": "yarn  lint:fix && yarn  prettier:fix",
     "eslint:migrate": "npx @eslint/migrate-config .eslintrc.json"
   },
   "husky": {
@@ -32,12 +32,13 @@
   "author": "Julfikar",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.16.0",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/nodemailer": "^6.4.13",
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "eslint": "^9.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.6",

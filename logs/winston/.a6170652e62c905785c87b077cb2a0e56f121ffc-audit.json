@@ -6,9 +6,19 @@
     "auditLog": "/Users/julfikar/Documents/university-management-auth/logs/winston/.a6170652e62c905785c87b077cb2a0e56f121ffc-audit.json",
     "files": [
         {
-            "date": 1726469129786,
-            "name": "/Users/julfikar/Documents/university-management-auth/logs/winston/uv-2024-16-09-12-success.log",
-            "hash": "bf5d7f99af2f2317e47b8975a0fe900a36a2481654abd37b96af5afb902afccc"
+            "date": 1731729046942,
+            "name": "/Users/julfikar/Documents/university-management-auth/logs/winston/uv-2024-16-11-09-success.log",
+            "hash": "1f792c9079c7184130526cef437eca11b0462cc27c2dc26f01f9c9608170bcfd"
+        },
+        {
+            "date": 1731730520492,
+            "name": "/Users/julfikar/Documents/university-management-auth/logs/winston/uv-2024-16-11-10-success.log",
+            "hash": "fe41a9f385c47b531ff4206f64760bc56a9c87a7dbb8094ab3149072768d0189"
+        },
+        {
+            "date": 1731944677228,
+            "name": "/Users/julfikar/Documents/university-management-auth/logs/winston/uv-2024-18-11-21-success.log",
+            "hash": "6a46c679533f17dce4d86d772f579d2cf8f2e02c930ab5f759649b0b66ffa129"
         }
     ],
     "hashType": "sha256"
